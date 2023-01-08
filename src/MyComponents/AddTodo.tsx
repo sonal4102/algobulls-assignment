@@ -29,7 +29,6 @@ export const AddTodo = (props) => {
     //console.log("I am in submit  = ", title, desc, tags ,status , date);
     e.preventDefault();
     let currDate = new Date().toString();
-   // let currDay = new Date().get.toString();
     if (!title || !desc || !status) {
       alert("Title or Description or Description cannot be blank");
     }else if(title.length>100 || desc.length>100){
@@ -59,10 +58,8 @@ export const AddTodo = (props) => {
       }
       
     }
-    // return false;
   };
   if (props.editing) {
-    //setTags(props.editing.tags);
     console.log("edit mode", props.editing.title);
   } else {
     console.log("Add mode");

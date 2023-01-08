@@ -39,8 +39,8 @@ export const Todos = (props) => {
                  placeholder="Type text here"
                  value={selectedKeys[0]}
                  onChange={(e) => {
-                   setSelectedKeys(e.target.value ? [e.target.value] : []);
-                   confirm({ closeDropdown: false });
+                //    setSelectedKeys(e.target.value ? [e.target.value] : []);
+                //    confirm({ closeDropdown: false });
                  }}
                  onPressEnter={() => {
                    confirm();
@@ -121,19 +121,6 @@ export const Todos = (props) => {
          dataIndex: "status",
          key: "status",
        },
-       //  {
-       //    title: "Action",
-       //    key: "action",
-       //    dataIndex: "sno",
-       //    render: (_: any, record,onDelete) => (
-       //      <Space size="middle">
-       //        <a>Edit {record.name} </a>
-       //        <a>Delete {onDelete}</a>
-
-       //         {/* <button onClick={onDelete}>Delete</button>  */}
-       //      </Space>
-       //    ),
-       //  },
        {
          key: "5",
          title: "Actions",
@@ -164,16 +151,6 @@ export const Todos = (props) => {
         margin: "40px auto"
     }
     return (
-      // <div className="container" style={myStyle}>
-      //     <h3 className="my-3">Todos List</h3>
-      //     {props.todos.length===0? "No Todos to display":
-      //     props.todos.map((todo)=>{
-      //         console.log(todo.sno);
-      //         return (<TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete}/>
-      //         )
-      //     })
-      //       }
-      // </div>
       <>
         <Table columns={columns} dataSource={props.todos} pagination={{pageSize:5}}/>;
       </>

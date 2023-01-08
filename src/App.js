@@ -1,9 +1,6 @@
 import './App.css';
-
 import { Todos } from "./MyComponents/Todos.tsx";
-
 import { AddTodo } from "./MyComponents/AddTodo.tsx";
-
 import React, { useState, useEffect } from 'react';
 import Swal from "sweetalert2";
 import { Modal } from "antd";
@@ -97,14 +94,7 @@ function App() {
        date: date,
        date2: date2,
      };
-    // let temp = todos;
-    // for(let i=0;i<todos.length;i++){
-    //   if(todos[i].sno==myTodo.sno){
-    //     myTodo.date2 = todos[i].date2;
-    //     temp[i] = myTodo;
-    //   }
-    // }
-    // setTodos(temp);
+    
     setTodos(
       todos.map((item) => {
         if (item.sno !== myTodo.sno) {
@@ -150,9 +140,6 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Header title="My Todos List" searchBar={false} /> */}
-        {/* <AddTodo addTodo={addTodo} />
-      <Todos todos={todos} onDelete={onDelete} />  */}
         <Routes>
           <Route
             path="/"
@@ -169,16 +156,7 @@ function App() {
                   }}
                   okText="Done"
                   onOk={() => {
-                    // setTodos((pre) => {
-                    //   return pre.map((todo) => {
-                    //     if (todo.id === editing.id) {
-                    //       return editing;
-                    //     } else {
-                    //       return todo;
-                    //     }
-                    //   });
-                    // });
-                    setTodos(todos);
+                   setTodos(todos);
                     resetEditing();
                   }}
                 >
@@ -187,20 +165,6 @@ function App() {
               </>
             }
           />
-
-          {/* <Route path="/about" element={<About />} /> */}
-
-          {/* <Route exact path="/" render={()=>{
-            return(
-            <>
-            <AddTodo addTodo={addTodo} />
-            <Todos todos={todos} onDelete={onDelete} /> 
-            </>)
-          }}> 
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>  */}
         </Routes>
       </Router>
     </>
