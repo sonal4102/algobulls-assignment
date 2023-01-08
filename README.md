@@ -6,4 +6,4 @@ FEATURES: In this project, we can write our daily todos in an effective manner u
 
 Local storage is also enabled.
 
-DEPLOYMENT: This project is deployed in netlify server https://sonalsingh-algobulls-assignment.netlify.app/
+DEPLOYMENT: This project is deployed in netlify server https://sonal-algobulls-assignment.netlify.app/
